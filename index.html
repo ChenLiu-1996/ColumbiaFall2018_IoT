@@ -1,0 +1,377 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html> 
+	<head>
+		<title>Columbia University EECS E4764 IoT Project Report #15</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<!-- <span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span> -->
+							<h1 id="title">Smart Personal Trainer</h1>
+							<p>Columbia University <br>
+								EECS E4764 Fall'18 Internet of Things<br>
+								Intelligent and Connected Systems<br>
+								Team 15 Project Report
+							</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+
+								Prologue's nav expects links in one of two formats:
+
+								1. Hash link (scrolls to a different section within the page)
+
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Abstract</span></a></li>
+								<li><a href="#motivation" id="motivation-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Motivation</span></a></li>
+								<li><a href="#system" id="system-link" class="skel-layers-ignoreHref"><span class="icon fa-th">System</span></a></li>
+								<li><a href="#results" id="results-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Results</span></a></li>
+								<li><a href="#references" id="references-link" class="skel-layers-ignoreHref"><span class="icon fa-th">References</span></a></li>
+								<li><a href="#team" id="team-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Our Team</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+                        <div class="container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/TymSHutLJ2Y" frameborder="0" allowfullscreen></iframe>
+
+                            <h2 class="alt">Smart Personal Trainer</h2>
+                            <p align="left">
+                                Smart Personal Trainer is an IoT system that offers an interactive and quantitative workout
+                                experience as a non-substitute alternative to human trainers. Our system provides visualization of
+                                skeletal and angular data of the user, corresponding professional video for reference, data analysis,
+                                classification, and interactive feedback.
+                            </p>
+
+
+                            <footer>
+                                <a href="#motivation" class="button scrolly">Motivation</a>
+                            </footer>
+
+                        </div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="motivation" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Motivation</h2>
+							</header>
+
+                            <p align="left">During physical exercises, incorrect posture or execution will 
+                            hinder the outcomes or even lead to injuries. Depending on the circumstances, 
+                            hiring a personal trainer may or may not be an affordable and preferable solution.
+                            Our project addresses this issue by providing the users with an alternative approach,
+                            an IoT system that is interactive, less expensive, and with a higher level of privacy.</p>
+
+
+
+						</div>
+					</section>
+					
+					
+					<section id="system" class="three">
+                        <div class="container">
+
+                            <header>
+                                <h2>System</h2>
+                            </header>
+
+                            <h3 align="left">Architecture</h3>
+                            <img src="images/blockdiagram.png" alt="" width="560" height="400" />
+                            <p align="left">
+                                Our system consists of a Kinect sensor that captures the skeletal and joint data of the user
+                                , a laptop that supports Visual Studio on which our main visualization program was developed, an Android phone
+                                that serves as the main user interface, and a wearable Esp8266 microcontroller with accelerometer that acts
+                                as an optional add-on item.
+                            </p>
+
+
+                            <h3 align="left">Technical Components</h3>
+
+                            <p align="left">
+                                1.	<strong>Kinect Skeletal Sensing</strong>:  The Kinect sensor is equipped with a color-stream camera, an infrared sensor,
+                                and a depth sensor. We used the Visual Studio project “SkeletonBasics-D2D” recommended by Kinect for Windows
+                                Developer Toolkit as our starting point and gradually added in functionalities including data extraction,
+                                joint angle calculation, data storage, and exercise classification.
+                            </p>
+                            <img src="images/skeletonbasics.jpg" alt="" />
+                            <p align="left">
+                                2.	<strong>Workout Intensity Sensing</strong>:  The wearable Esp8266-ADXL345 device tracks the
+                                x-, y-, and z- acceleration of the body part on which the device is worn, and returns a real-time
+                                classification using a designated SVM model on the EC2 server. The classification result takes the form of a number
+                                between 0 and 1 that represents the fraction of time the body part is considered stationary.
+                            </p>
+
+                            <p align="left">
+                                3.	<strong>Android Interface</strong>:  The voice-recognition-enabled Android device can be used to fetch the
+                                professional video of any exercise available in our library. In the video, a professional trainer demonstrates
+                                how to do the particular exercise, while his posture execution was presented by both a regular color-stream
+                                video and a skeletal-angular visualization.
+                            </p>
+
+                            <p align="left">
+                                4.	<strong>Exercise classification</strong>:  The angular data auto-recorded by the Visual Studio program can be
+                                forwarded to our EC2 server and analyzed by another designated SVM model. Our classification method can not only
+                                distinguish which exercise the user is doing but also return more detailed analysis after segmenting the entire workout
+                                into individual repetitions. Each repetition can be classified either as perfect execution or as one of the most probable
+                                mistakes, and the classification result is sent back as a video to Android app indicating the primary mistake the user made.
+                            </p>
+
+
+                        </div>
+					</section>
+					
+					
+					<section id="results" class="two">
+                        <div class="container">
+
+                            <header>
+                                <h2>Results</h2>
+                            </header>
+
+                            <p align="left">
+                                Our Android app is capable of playing professional workout video for user to follow.
+                                And when exercise is finished, it can return what kind of primary mistake the user made. Google Speech API enable
+                                the user to choose which one to do among 5 exercises via voice command.
+                            </p>
+                            <article class="item">
+                                <img src="images/Android1.jpg" alt="" width="250" height="400" />
+                                <img src="images/Android2.jpg" alt="" width="250" height="400" />
+                                <header>
+                                    <h3>Android App UI</h3>
+                                </header>
+                            </article>
+
+                            <p align="left">
+                                We defined several possible primary mistakes for each exercise. In the graph below, angle of 6 joints and the mistake classified are shown. Taking "side lift" for example, for this exercise three
+                                primary mistakes may happen:bending arms ,over-lift and under-lift.
+                                After the user finish the exercise, our EC2 server can use the model trained by us to classify what kind of mistake the user made.
+
+
+                            </p>
+
+                            <article class="item">
+                                <a href="#"><img src="images/classify.jpg" alt="" width="560" height="315" /></a>
+                                <header>
+                                    <h3>Classified as mistake: bending arms</h3>
+                                </header>
+                            </article>
+
+                            <p align="left">
+                                We tested our model by doing 1 set of exercise (10 repetition in total) which
+                                consists of correct and wrong postures. This is the prediction made by applying our model：
+                            </p>
+
+                            <article class="item">
+                                <a href="#"><img src="images/classification.png" alt="" width="560" height="315" /></a>
+                                <header>
+                                    <h3>Classification on Amazon EC2</h3>
+                                </header>
+                            </article>
+
+                            <p align="left">
+                                Workout Intensity is an add-on function of our system. It is fulfilled with ESP8266 and accelerometer. It gives back a ratio of moving and stationary to the user.
+                            </p>
+                            <article class="item">
+                                <a href="#"><img src="images/ESP.jpg" alt="" width="560" height="315" /></a>
+                                <header>
+                                    <h3>Workout Intensity</h3>
+                                </header>
+                            </article>
+
+                        </div>
+					</section>
+					
+					<section id="references" class="three">
+						<div class="container">
+
+							<header>
+								<h2>References</h2>
+							</header>
+
+                            <p align="left">
+                                1.D. Haas, S. Phommahavong, J. Yu, S. Krüger-Ziolek, K. Möller, J. Kretschmer, "Kinect based physiotherapy system for home use", Proc. Current Directions in Biomedical Engineering, pp. 180-183, 2015.</br>
+
+                                2.K. Chang, M. Y. Chen and J. Canny, “Tracking free-weight exercises,” In Proc. 9th International conference on ubiquitous computing, UbiComp ‘2007, pp. 19-37.</br>
+
+                                3.Manzi A., Cavallo F., Dario P. (2017) A Neural Network Approach to Human Posture Classification and Fall Detection Using RGB-D Camera. In: Cavallo F., Marletta V., Monteriù A., Siciliano P. (eds) Ambient Assisted Living. ForItAAL 2016. Lecture Notes in Electrical Engineering, vol 426. Springer, Cham</br>
+
+                                4.Microsoft.com. (2018). Download Kinect for Windows SDK 2.0 from Official Microsoft Download Center. [online] Available at: https://www.microsoft.com/en-us/download/details.aspx?id=44561 [Accessed 29 Oct. 2018].</br>
+
+                                5.N. Ravi, N. Dandekar, P. Mysore, M. L. Littman, "Activity recognition from Accelerometer data", Proc. 17th conference on Innovative applications of artificial intelligence, pp. 1541-1546, 2005.</br>
+
+                                6.P. S. Madanayake, W. A. D. K. Wickramasinghe, H. P. Liyanarachchi, H. M. D. M. Herath, A. Karunasena and T. D. Perera, "Fitness Mate: Intelligent workout assistant using motion detection," 2016 IEEE International Conference on Information and Automation for Sustainability (ICIAfS), Galle, 2016, pp. 1-5. doi: 10.1109/ICIAFS.2016.7946559</br>
+
+                                7.Review: Nike+ Kinect is the perfect exercise game with a fatal flaw, [online] Available: https://www.fastcodesign.com/1671136/review-nike-kinect-is-the-perfect-exercise-game-with-a-fatal-flaw. </br>
+
+                                8.“SmartSpot,” [Online]. Available: https://www.smartspot.io [Accessed:Oct. 29, 2018].</br>
+                            </p>
+
+						</div>
+					</section>
+					
+
+				<!-- About Me -->
+					<section id="team" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Our Team</h2>
+							</header>
+
+							<!-- <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a> -->
+
+
+							<div class="row">
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/member1.jpg" alt="" /></a>
+										<header>
+											<h3>Jingping Nie</h3>
+                                            <p>
+                                                Columbia University, M.S. in Electrical Engineering </br>
+                                                Smith College, B.S. in Engineering Science  </br>
+                                                linkedin: <a href="https://www.linkedin.com/in/jingpingnie" class="fa fa-linkedin-square"></a>
+                                            </p>
+										</header>
+									</article>
+								</div>
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/member2.jpg" alt="" /></a>
+										<header>
+											<h3>Chen Liu</h3>
+                                            <p>
+                                                Columbia University, M.S. in Electrical Engineering (expected Dec 2019)</br>
+                                                Bucknell University, B.S. in Electrical Engineering, Minor in Biomedical Engineering</br>
+                                                linkedin: <a href="https://www.linkedin.com/in/chen-raphael-liu" class="fa fa-linkedin-square"></a>
+                                            </p>
+										</header>
+									</article>
+								</div>
+								<div class="4u$ 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/member3.jpg" alt="" /></a>
+										<header>
+											<h3>Zhendong Deng</h3>
+                                            <p>
+                                                Columbia University, M.S. in Electrical Engineering </br>
+                                                linkedin: <a href="http://linkedin.com/in/zhendong-deng-ab173b99" class="fa fa-linkedin-square"></a>
+                                            </p>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+                            
+                            <p align="left">
+                                <strong>Jingping Nie: </strong>jn2551@columbia.edu</br>
+                                <strong>Chen Liu: </strong>cl3760@columbia.edu</br>
+                                <strong>Zhendong Deng: </strong>zd2198@columbia.edu</br>
+                                </br>
+                                <strong>Columbia University </strong><a href="http://www.ee.columbia.edu">Department of Electrical Engineering</a><br>
+                                <!-- <strong>Class Website:</strong>
+    <a href="https://edblogs.columbia.edu/eecs4764-001-2018-3/">Columbia University EECS E4764 Fall '18 IoT</a></br> -->
+                                <strong>Instructor:</strong> <a href="http://fredjiang.com/">Professsor Xiaofan (Fred) Jiang</a>
+                            </p>
+							
+
+							<!-- <form method="post" action="#">
+								<div class="row">
+									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="12u$">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="12u$">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form> -->
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; IoT Project | All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
