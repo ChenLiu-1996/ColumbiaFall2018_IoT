@@ -1,4 +1,4 @@
-"# ColumbiaFall2018_IoT" 
+# ColumbiaFall2018_IoT: Smart Personal Trainer
 
 EECS 4764 Internet of Things Final Project: Smart Personal Trainer
 
